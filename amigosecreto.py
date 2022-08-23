@@ -18,11 +18,15 @@ while(cond != "Fim."):
 
     if chute == "FIM":
         cond = "Fim."
-        break
+        continue
 
     listaChute = chute.split()
 
     participante = listaChute[0]
+
+    if participante not in participantes:
+        print("Seu amigo não está participando do amigo secreto!")
+        continue
     
     listaPresentes = participantes[participante]
 
